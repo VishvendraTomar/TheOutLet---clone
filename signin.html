@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Singin</title>
     <style>
         *{
            margin: 0%;
@@ -76,95 +76,6 @@
         .navbar>div:hover{
             background-color: black;
             color: white;
-        }
-        .product{
-            border: 1px solid red;
-            width: auto;
-            height: 800px;
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: 75%;
-            gap: 30px;
-            margin-bottom: 50px;
-
-        }
-        .product>div{
-            border: 1px solid black;
-            display: block;
-            text-align: center;
-            justify-content: center;
-        }
-        .product>div>img{
-            width: 100%;
-            height: 100%;
-            transition: width 2s,height 2s;
-        }
-        .product>div>img:hover{
-            width: 101%;
-            height: 105%;
-        }
-        .product>div>h3{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 400;
-            
-            margin-top: 10px;
-        }
-        .product>div>h4{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 400;
-            
-            margin-top: 15px;
-        }
-        button{
-            padding: 15px;
-            background-color: white;
-            margin-top: 30px;
-            transition: color 1s,background-color 1s,padding 2s;
-        }
-        button:hover{
-            color: white;
-            padding: 20px;
-            background-color: black;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            
-        }
-        .sideproduct{
-            border: 1px solid rgb(252, 135, 0);
-            width: auto;
-            height: 600px;
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(2,70%);
-            gap: 30px;
-            margin-bottom: 50px;
-
-        }
-        .sideproduct>div{
-            border: 1px solid black;
-            display: block;
-            text-align: center;
-            justify-content: center;
-        }
-        .sideproduct>div>img{
-            width: 100%;
-            height: 100%;
-            transition: width 2s,height 2s;
-        }
-        .sideproduct>div>img:hover{
-            width: 101%;
-            height: 105%;
-        }
-        .sideproduct>div>h3{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 400;
-            
-            margin-top: 10px;
-        }
-        .sideproduct>div>h4{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 400;
-            
-            margin-top: 15px;
         }
         .about{
             width: 100%;
@@ -240,6 +151,52 @@
             height: 50px;
 
         }
+        .signin{
+            border: 1px solid red;
+            width: 100%;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: 100% ;
+            background-image: url('https://www.theoutnet.com/assets/ton-background-images/high-res.jpg');
+        }
+        .singinbox{
+            width: 35%;
+            height: 500px;
+            border: 1px solid black;
+            background-color: white;
+           
+           
+        }
+        #form{
+          padding: 2%;
+        }
+        #form>h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           margin-top: 20px;
+           margin-bottom: 20px;
+           font-size: 25px;
+        }
+        hr{
+            height:  2px;
+            background-color: black;
+        }
+        #mobile,#password,#email{
+           width: 92%;
+           margin-top: 20px;
+
+        }
+        #Cont{
+            width: 100%;
+            margin-top: 20px;
+            background-color: white;
+            transition: background-color 1s,color 1s;
+        }
+        #Cont:hover{
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -261,78 +218,22 @@
         <div>70% Off</div>
         <div>Editorial</div>
     </div>
-    
-    <div class="product">
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1274246/2d189287ccdcbc3fc6e9da85fa895a7c/main-2-intl-image-data.jpg/w1500_q80.jpg" alt="">
-            <h3>MAISON MARGIELA AT UP TO 50% OFF</h3>
-            <h4>Time for a refresh? You can press reboot right here</h4>
-            <button>
-                SHOP MAISON MARGIELA
-            </button>
-        </div>
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1277936/2104b568be74e3f6bc44db2041e274a0/main-2-image-default-data.jpg/w1500_q80.jpg" alt="">
-            <h3>GANNI AT UP TO 70% OFF</h3>
-            <h4>All the outfits you could possibly need to style out the season</h4>
-            <button>
-                SHOP GANNI
-            </button>
-        </div>
-    </div>
 
-    <!-- -------------------------------------side products----------------------- -->
-    <div class="sideproduct">
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1277978/65ddf511d0c7ea68b8540eb3c7acbe5c/promo-1-image-data.jpg/w1500_q80.jpg" alt="">
-            <h3>TOP PICKS AT UP TO 70% OFF</h3>
-            <h4>The best blouse from See By Chloe, Zimmermann and more</h4>
-            <button>
-                SHOP BLOUSE
-            </button>
-        </div>
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1277992/74a18fb265437dd71da51a041eb0617d/promo-2-image-data.jpg/w1500_q80.jpg" alt="">
-            <h3>MIX IN MIDIS AT UP TO 60% OFF</h3>
-            <h4>Look to midi dresses for your next summer go-to outfit</h4>
-            <button>
-                SHOP MINI DRESSES
-            </button>
-        </div>
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1277982/827b3eb78474fb7b76aca44637669bb4/promo-3-image-data.jpg/w1500_q80.jpg" alt="">
-            <h3>ADD BLAZERS AT UP TO 60% OFF</h3>
-            <h4>Smarten up basic ultra-pretty dresses</h4>
-            <button>
-                SHOP BLAZERS
-            </button>
-        </div>
-        
-    </div>
-    <div class="sideproduct">
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1274274/8a6f72d39bac6057d256262c6f8e4e83/promo-1-intl-image-data.jpg/w1500_q80.jpg" alt="">
-            <h3>TRUSTY TOPS AT UP TO 60% OFF</h3>
-            <h4>A curated collection you can always rely on</h4>
-            <button>
-                SHOP TOPS
-            </button>
-        </div>
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1274266/d20c717cf309ea203909713e9fd3bb90/promo-2-intl-image-data.jpg/w1500_q80.jpg" alt="">
-            <h3>FORMAL FOOTWEAR AT UP TO 50% OFF</h3>
-            <h4>Finish your sun-soaking loks with these summer loafers</h4>
-            <button>
-                SHOP SHOES
-            </button>
-        </div>
-        <div>
-            <img src="https://www.theoutnet.com/cms/ycm/resource/blob/1274264/e74890c443be727f3d7768f816b14fea/promo-3-intl-image-data.jpg/w1500_q80.jpg" alt="">
-            <h3>SHARP SHORTS AT UP TO 55% OFF</h3>
-            <h4>Find the perfect pair for your personal style <h4>
-            <button>
-                SHOP SHORTS
-            </button>
+    <div class="signin">
+        <div class="singinbox">
+            <form id="form">
+                <h1>Welcome</h1>
+                <hr>
+                <input placeholder="Enter your Name" id="mobile" type="text"/>
+                
+                <input placeholder="Enter your password" id="password" type="password" />
+                
+                <input type="email" id="email" placeholder="Enter your Email" />
+                
+               <input type="submit" id="Cont" value="Sing In" />
+
+               <div style="margin-top: 20px;"><p>New User? <a id="anchor"href="signup.html"><span>Sign Up</span></a> </p></div>
+             </form> 
         </div>
     </div>
     <!-- -------------------------------about section----------------------------- -->
@@ -385,3 +286,37 @@
     </div>
 </body>
 </html>
+<script>
+    var userData=JSON.parse(localStorage.getItem("allUsers"));
+    document.querySelector("#form").addEventListener("submit",logIn)
+
+    function logIn(){
+        event.preventDefault();
+        var x=document.querySelector("#mobile").value;
+
+        var y=document.querySelector("#password").value;
+
+        var z=document.querySelector("#email").value;
+        if(!x || !y || !z) 
+        {
+            alert("Enter full details")
+            return;
+        }
+      
+        var findUser=userData.find(function(c){
+            return c.x==x && c.y==y && c.z==z;
+        
+        }) 
+        console.log(findUser)
+        if(!findUser){
+            alert("User not found!!");
+            return;
+        }
+        alert("Log In Successfull");
+        window.location.href="index.html";
+        // userData.push((x,y));
+        // localStorage.setItem("allUsers", JSON.stringify(userData))
+    }
+    
+
+</script>

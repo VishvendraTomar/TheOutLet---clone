@@ -4,9 +4,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mans shop</title>
+    <style>
+        *{
+           margin: 0%;
+           padding: 0%;
+        }
+        body{
+            width: 90%;
+            margin: auto;
+        }
+        .heading{
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid black; */
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            position: sticky;
+            top: 0px;
+            background-color: white;
+        }
+        .heading>h2{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 400;
+            padding-top: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .navbar0{
+            height: 40px;
+            border: 1px solid black;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            background-color: rgb(217, 217, 217);
+        }
+        .navbar0>div{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%;
+            transition: background-color 1s,color 1s;
+        }
+        .navbar{
+            height: 40px;
+            /* border: 1px solid black; */
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .navbar>div{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 20px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5%;
+            transition: background-color 1s,color 1s;
+        }
+        .navbar>div:hover{
+            background-color: black;
+            color: white;
+        }
+         .about{
+            width: 100%;
+            height: 500px;
+            border: 2px solid red;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .aboutlist{
+            display: flex;
+            justify-content:space-around;
+        }
+        .aboutlist>div>ol>ul:hover{
+            color: white;
+            background-color: black;
+
+        }
+        .aboutlist>div>ol>ul{
+            margin-top: 15px;
+            font-size: 18px;
+            transition: color 1s,background-color 0.75s;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        }
+        .aboutinfo>div{
+            height: 100px;
+            display: flex;
+            
+        }
+        .aboutinfo>div>img{
+            width: 80px;
+            height: 80px;
+        }
+        .aboutinfo>div>p{
+            font-size: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           margin-top: 30px;
+        }
+        .aboutinfo>h4{
+              font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+        .aboutinfo>p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+          
+        }
+        .margintop{
+            margin-top: 35px;
+            cursor: pointer;
+        }
+        ol{
+            padding: 30px;
+            list-style: none;
+        }
+        input{
+            padding: 15px;
+        }
+        .getsocial{
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            width: 70%;
+            margin-top: -20px;
+        }
+        .getsocial>img{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+
+        }
+    </style>
 </head>
 <body>
-    <link rel="stylesheet" href="https://cdn-icons-mp4.flaticon.com/512/6172/6172514.mp4">
+    <div class="heading">
+        <h2>THE OUTNET</h2>
+    </div>
+    <div class="navbar0">
+
+    </div>
+    <div class="navbar">
+        <div>Just In</div>
+        <div>Designers</div>
+        <div>Bestsellers</div>
+        <div>Clothing</div>
+        <div>Shoes</div>
+        <div>Accessoris</div>
+        <div>Sport</div>
+        <div>Wardrobe Staples</div>
+        <div>70% Off</div>
+        <div>Editorial</div>
+    </div>  
+
+    
+    <!-- -------------------------------about section----------------------------- -->
+    <div class="about">
+        <!-- <h4>Help and Information</h4> -->
+        <div class="aboutlist">
+            <div>
+                <ol>
+                    <h2>Help and Information</h2>
+                    <ul>About us</ul>
+                    <ul>Affiliates</ul>
+                    <ul>Careers</ul>
+                    <ul>Contact Us</ul>
+                    <ul>Help</ul>
+                    <ul>Privacy Policy</ul>
+                    <ul>How to find your Size With Fit Finder</ul>
+                    <ul>Terms and Conditions</ul>
+                    <ul>Our Considered Pledge</ul>
+                </ol>
+            </div>
+            <div>
+                <ol class="margintop">
+                    <ul>Payment</ul>
+                    <ul>Delivery</ul>
+                    <ul>Returns</ul>
+                    <ul>Track your Order</ul>
+                    <ul>Create a Return</ul>
+                    <ul>Track your Return</ul>
+                    <ul>Cookies Center</ul>
+                    <ul>Our Resale Service</ul>
+                </ol>
+            </div>
+        </div>
+        <div class="aboutinfo">
+            <h4>Want to stay stylishly in the know?</h4>
+            <p>Sign up today for email exclusives including early access to Sale, the latest trends and arrivals from your favorite designers and can’t miss promotions.</p>
+            <input type="email" id="email" value="Enter your Email Address"> <button>Subscribe</button>
+            <h4>24/7 Costomer Care</h4>
+            <div><img src="https://cdn-icons-gif.flaticon.com/6172/6172514.gif" alt=""><p>+44 330 022 4250</p></div>
+            <div><img src="https://cdn-icons-gif.flaticon.com/6416/6416396.gif" alt=""><p>customercare@theoutnet.com</p></div>
+            
+            <div class="getsocial">
+                <a href="https://www.facebook.com/THEOUTNET"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384005.png" alt=""></a>
+                <a href="https://twitter.com/theOutnet"><img src="https://cdn-icons.flaticon.com/png/128/2168/premium/2168336.png?token=exp=1655360756~hmac=964a2bae97a763b6a8fa5f7a15d4df47" alt=""></a>
+                <a href="https://in.pinterest.com/theoutnet/_created/"><img src="https://cdn-icons-png.flaticon.com/128/49/49440.png" alt=""></a>
+                <a href="https://www.youtube.com/theoutnet"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384012.png" alt=""></a>
+                <a href="https://www.instagram.com/theoutnet/"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" alt=""></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
