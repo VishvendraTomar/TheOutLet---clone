@@ -151,6 +151,27 @@
             height: 50px;
 
         }
+        #rsp{
+            display: flex;
+        }
+        #off_price{
+            text-decoration: line-through;
+            
+        }
+        #crossprice{
+            display: flex;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 20px;
+            width: 90%;
+            margin: auto;
+        }
+        #images{
+            width: 250px;
+            height: 300px;
+        }
     </style>
 </head>
 <body>
@@ -173,6 +194,13 @@
         <div>Editorial</div>
     </div>  
     <!-- ---------------------product------------------ -->
+    <div id="short">
+        <select name="" id="pricesort" onchange="sort()">
+            <option value="">Select</option>
+            <option value="high-low">high-low</option>
+            <option value="low-high">low-high</option>
+        </select>
+    </div>
     <div id="container">
 
     </div>
@@ -1386,11 +1414,24 @@
     
 
 
+var add = JSON.parse(localStorage.getItem('mycart')) || []
+display(arr)
+
+function sort(){
+    var n = document.querySelector("#pricesort").value
+    if(n == "high-low")
+    {
+        arr.sort(function(a,b){return +a.price-+b.price});
+    }
+    if(n == "low-high"){
+        arr.sort(function(a,b){return +b.price-+a.price});
+
+    }
+    display(arr)
+}
 
 
-
-
-      display(arr)
+ 
 
 
      
@@ -1403,15 +1444,44 @@ function display(arr){
 arr.forEach(function(e){
  var a=document.createElement("img")
  a.src=e.images.image1
+ a.setAttribute("id","images")
  var b=document.createElement("p")
  b.innerText=e.title
- console.log(b)
+
  var c=document.createElement("p")
  c.innerText=e.description
+
+ var rs=document.createElement("p")
+ rs.innerText="Rs"+"  "
+
  var d=document.createElement("p")
- d.innerText="Rs"+" "+e.price
+ d.innerText=e.price
+ var rsp=document.createElement("div")
+ rsp.append(rs,d)
+ rsp.setAttribute("id","rsp")
+
+var f=document.createElement("p")
+f.innerText=e.off_price
+f.setAttribute("id","off_price")
+var g=document.createElement("p")
+g.innerText=e.discount+"%"
+
+var h=document.createElement("div")
+h.append(f,g)
+h.setAttribute("id","crossprice")
+
+var i=document.createElement("button")
+i.innerText="Add to cart"
+i.addEventListener("click",function(){
+    add.push(e)
+    localStorage.setItem("mycart", JSON.stringify(add))
+})
+
+
+
+
  var ld=document.createElement("div")
- ld.append(a,b,c,d)
+ ld.append(a,b,c,rsp,h,i)
  var z=document.querySelector("#container")
  z.append(ld)
 })
