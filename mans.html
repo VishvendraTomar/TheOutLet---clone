@@ -200,6 +200,11 @@
             <option value="high-low">high-low</option>
             <option value="low-high">low-high</option>
         </select>
+        <select name="" id="gender" onchange="filter()">
+            <option value="">Select</option>
+            <option value="men">men</option>
+            <option value="women">women</option>
+        </select>
     </div>
     <div id="container">
 
@@ -1421,13 +1426,19 @@ function sort(){
     var n = document.querySelector("#pricesort").value
     if(n == "high-low")
     {
-        arr.sort(function(a,b){return +a.price-+b.price});
+        arr.sort(function(a,b){return +b.price-+a.price});
     }
     if(n == "low-high"){
-        arr.sort(function(a,b){return +b.price-+a.price});
+        arr.sort(function(a,b){return +a.price-+b.price});
 
     }
     display(arr)
+}
+function filter(){
+    var o = document.querySelector("#gender").value
+    var fill = arr.filter(function(elem){return elem.gender == o})
+    display(fill)
+    
 }
 
 
@@ -1436,7 +1447,7 @@ function sort(){
 
      
 function display(arr){
-  
+  document.querySelector("#container").innerHTML = null
 
 
     

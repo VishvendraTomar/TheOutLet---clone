@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        #rsp{
+            display: flex;
+        }
+        #off_price{
+            text-decoration: line-through;
+            
+        }
+        #crossprice{
+            display: flex;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 20px;
+            width: 90%;
+            margin: auto;
+        }
+        #images{
+            width: 250px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+    var cart = JSON.parse(localStorage.getItem("mycart"));
+    console.log(cart);
+
+
+    cart.forEach(function(e,index){
+ var a=document.createElement("img")
+ a.src=e.images.image1
+ a.setAttribute("id","images")
+ var b=document.createElement("p")
+ b.innerText=e.title
+
+ var c=document.createElement("p")
+ c.innerText=e.description
+
+ var rs=document.createElement("p")
+ rs.innerText="Rs"+"  "
+
+ var d=document.createElement("p")
+ d.innerText=e.price
+ var rsp=document.createElement("div")
+ rsp.append(rs,d)
+ rsp.setAttribute("id","rsp")
+
+var f=document.createElement("p")
+f.innerText=e.off_price
+f.setAttribute("id","off_price")
+var g=document.createElement("p")
+g.innerText=e.discount+"%"
+
+var h=document.createElement("div")
+h.append(f,g)
+h.setAttribute("id","crossprice")
+
+var i=document.createElement("button")
+i.innerText="Delete"
+i.addEventListener("click",function(){
+cart.splice(index,1)
+localStorage.setItem("mycart", JSON.stringify(cart))
+window.location.reload()
+})
+
+
+
+
+ var ld=document.createElement("div")
+ ld.append(a,b,c,rsp,h,i)
+ var z=document.querySelector("#container")
+ z.append(ld)
+})
+
+</script>
