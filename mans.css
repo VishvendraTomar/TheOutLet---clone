@@ -165,3 +165,16 @@ input{
     width: 250px;
     height: 300px;
 }
+button{
+    padding: 15px;
+    background-color: white;
+    margin-top: 30px;
+    transition: color 1s,background-color 1s,padding 2s;
+}
+button:hover{
+    color: white;
+    padding: 20px;
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}

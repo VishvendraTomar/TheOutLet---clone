@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cart</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bill.css">
+    <link rel="stylesheet" href="cart.css">
     <style>
         #rsp{
             display: flex;
@@ -27,18 +30,79 @@
             width: 250px;
             height: 300px;
         }
+        button{
+            padding: 15px;
+            background-color: white;
+            margin-top: 30px;
+            transition: color 1s,background-color 1s,padding 2s;
+        }
+        button:hover{
+            color: white;
+            padding: 20px;
+            background-color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        }
     </style>
 </head>
 <body>
+    <div class="heading">
+        <a href="index.html"><h2>THE OUTNET</h2></a>
+    </div>
+    <div class="navbar0">
+        <div id="search">
+            <img src="https://www.theoutnet.com/ycm/resource/blob/1202300/8c41f371b963212fbd38dfd2fde14f42/hanger-data.png" alt="">
+            <p>Extra 15%off of your first clothing order</p>
+        </div>
+        <div id="search">
+            <img src="https://www.theoutnet.com/ycm/resource/blob/1213156/a89d1fd400b76c8386958cf7cdcdfaea/mobile-icon-data.png" alt="">
+            <p>App-y shopping: Download our app</p>
+        </div>
+        <div id="sign">
+            <!-- <a href="signin.html"><h3>login</h3></a>
+        
+        <a id="vertical" href="signup.html"><h3>Signup</h3></a> -->
+        </div>
+    </div>
+    <div class="navbar">
+        <div>Just In</div>
+        <div>Designers</div>
+        <div>Bestsellers</div>
+        <div>Clothing</div>
+        <div>Shoes</div>
+        <div>Accessoris</div>
+        <div>Sport</div>
+        <div>Wardrobe Staples</div>
+        <div>70% Off</div>
+        <div>Editorial</div>
+    </div>
     <div id="container">
 
     </div>
+    <hr>
+    <div id="outer2">
+        <div id="total">TOTAL</div>
+        <div>Rs.</div>
+        <div><p id="distotal"></p></div>
+    </div>
+
+    <div id="tag">
+        <p id="comment">* For this order: Accepted food coupon is Rs. </p>
+        <p id="distag"></p>
+    </div> 
+    <hr id="hr1"> 
+     <button id="check"> <a href="orderPlaced.html">Place Order</a> </button>
+     <p id="lc">** Actual delivery charges computed at checkout time</p>
+  </div>
+
+
 </body>
 </html>
 <script>
+
     var cart = JSON.parse(localStorage.getItem("mycart"));
     console.log(cart);
-
+    document.querySelector("#container").innerHTML = null;
 
     cart.forEach(function(e,index){
  var a=document.createElement("img")
@@ -85,5 +149,28 @@ window.location.reload()
  var z=document.querySelector("#container")
  z.append(ld)
 })
+
+var su=z.reduce(function(sum,elem){
+    return sum=sum+ +elem.ap
+},0)
+
+ var saves=z.reduce(function(sum,elem){
+   return sum=sum+ +elem.mrp
+ },0)
+ console.log(saves)
+
+var uu=document.querySelector("#dis")
+uu.innerText=Math.ceil(su)
+
+var uuu=document.querySelector("#distotal")
+uuu.innerText=Math.ceil(su)
+
+var u=document.querySelector("#distag")
+u.innerText=Math.ceil(su)
+var x= Math.ceil( +saves - +su   )
+
+ var v=document.querySelector("#sa2")
+ v.innerText= Math.ceil(x)
+
 
 </script>
