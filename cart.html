@@ -148,29 +148,16 @@ window.location.reload()
  ld.append(a,b,c,rsp,h,i)
  var z=document.querySelector("#container")
  z.append(ld)
-})
-
-var su=z.reduce(function(sum,elem){
-    return sum=sum+ +elem.ap
-},0)
-
- var saves=z.reduce(function(sum,elem){
-   return sum=sum+ +elem.mrp
- },0)
- console.log(saves)
-
-var uu=document.querySelector("#dis")
-uu.innerText=Math.ceil(su)
-
-var uuu=document.querySelector("#distotal")
-uuu.innerText=Math.ceil(su)
-
-var u=document.querySelector("#distag")
-u.innerText=Math.ceil(su)
-var x= Math.ceil( +saves - +su   )
-
- var v=document.querySelector("#sa2")
- v.innerText= Math.ceil(x)
+ })
+ var su=cart.reduce(function(sum,elem){
+         return sum=sum+ +elem.price
+        },0)
+console.log(su)
+var aa=document.querySelector("#distotal")
+aa.innerText=su
+var bb=document.querySelector("#distag")
+bb.innerText=su
+ 
 
 
 </script>
